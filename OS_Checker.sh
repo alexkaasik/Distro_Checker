@@ -21,6 +21,10 @@ for ((i = 0 ; i <= 1; i++)); do
 			echo "Ubuntu/Debian"
 			break
 			;;
+		gentoo)
+			echo "Gentoo"
+			break
+			;;
         	*)
         		echo "$Distro was based on"
 			Distro=$(cat /etc/*-release | grep "^ID_LIKE=")
