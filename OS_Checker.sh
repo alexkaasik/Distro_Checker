@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 Distro=$(cat /etc/*-release | grep "^ID=")
 Distro=$(echo "$Distro" | sed -r 's/[ID=]+//g')
@@ -15,6 +15,10 @@ for ((i = 0 ; i <= 1; i++)); do
 			;;
         	debian)
         		echo "Debian"
+			break
+			;;
+		ubuntu)
+			echo "Ubuntu/Debian"
 			break
 			;;
         	*)
